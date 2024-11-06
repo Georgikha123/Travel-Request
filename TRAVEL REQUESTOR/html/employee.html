@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee</title>
+    <link rel="stylesheet" href="../css/employee.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>TRAVEL REQUESTING</h1>
+            <button id="logoutButton">Log out</button>
+            <div class="profile-icon">
+                <span>👤</span>
+            </div>
+        </header>
+
+        <nav class="tab-menu">
+            <button id="formTab" class="tab active">Form</button>
+            <button id="viewRequestTab" class="tab">View Request</button>
+        </nav>
+
+        <!-- Travel Request Form Section -->
+        <section id="travelRequestFormSection">
+            <h2>Travel Request Form</h2>
+            <form id="travelRequestForm">
+                <div class="form-group">
+                    <label for="empId">Emp Id</label>
+                    <input type="text" id="empId" placeholder="Employee ID" required>
+                    
+                    <label for="empName">Emp Name</label>
+                    <input type="text" id="empName" placeholder="Employee Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="project">Project</label>
+                    <input type="text" id="project" placeholder="Project" required>
+                    
+                    <label for="cause">Cause for travel</label>
+                    <input type="text" id="cause" placeholder="Cause" required>
+                </div>
+                <div class="form-group">
+                    <label for="source">Source</label>
+                    <input type="text" id="source" placeholder="Source" required>
+                    
+                    <label for="destination">Destination</label>
+                    <input type="text" id="destination" placeholder="Destination" required>
+                </div>
+                <div class="form-group">
+                    <label for="fromDate">From Date</label>
+                    <input type="date" id="fromDate" required>
+                    
+                    <label for="noOfDays">No of days</label>
+                    <input type="number" id="noOfDays" min="1" value="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="modeOfTravel">Mode of travel</label>
+                    <input type="text" id="modeOfTravel" placeholder="Mode of travel" required>
+                </div>
+                <div class="form-group">
+                    <label for="priority">Priority</label>
+                    <select id="priority" required>
+                        <option value="critical">Critical</option>
+                        <option value="normal">Normal</option>
+                    </select>
+                </div>
+                <button type="button" id="submitRequestButton">Submit Request</button>
+            </form>
+        </section>
+
+       <!-- View Request Section (Employee) -->
+<section id="viewRequestSection" style="display: none;">
+    <h2>View Request</h2>
+    <div class="filter">
+        <label for="filterStatus">Filter by Priority:</label>
+        <select id="filterStatus">
+            <option value="all">All</option>
+            <option value="critical">Critical</option>
+            <option value="normal">Normal</option>
+        </select>
+    </div>
+
+
+<main>
+    <div class="tabs">
+        <button class="tab active" data-status="all">All</button>
+        <button class="tab" data-status="approved">Approved</button>
+        <button class="tab" data-status="pending">Pending</button>
+        <button class="tab" data-status="rejected">Rejected</button>
+        <button class="tab" data-status="onhold">On Hold</button>
+    </div>
+
+    <!-- Travel Requests Table -->
+    <table id="requestTable">
+        <thead>
+            <tr>
+                <th>Employee Name</th>
+                <th>Destination</th>
+                <th>Priority</th>
+                <th>Project</th>
+                <th>View Details</th>
+            </tr>
+        </thead>
+        <tbody id="requestTableBody">
+            <!-- JavaScript will populate this section with requests -->
+        </tbody>
+    </table>
+</main>
+
+
+    <!-- View More Modal -->
+    <div id="viewMoreModal" class="request-details">
+        <h3>Travel Request Details</h3>
+        <p><strong>Employee ID:</strong> <span id="modalEmpId"></span></p>
+        <p><strong>Employee Name:</strong> <span id="modalEmpName"></span></p>
+        <p><strong>Project:</strong> <span id="modalProject"></span></p>
+        <p><strong>Cause for Travel:</strong> <span id="modalCause"></span></p>
+        <p><strong>Source:</strong> <span id="modalSource"></span></p>
+        <p><strong>Destination:</strong> <span id="modalDestination"></span></p>
+        <p><strong>From Date:</strong> <span id="modalFromDate"></span></p>
+        <p><strong>No of Days:</strong> <span id="modalNoOfDays"></span></p>
+        <p><strong>Mode of Travel:</strong> <span id="modalModeOfTravel"></span></p>
+        
+        <button class="close-btn" id="closeModalBtn">Close</button>
+    </div>
+
+    <script src="../js/request.js"></script>
+</body>
+</html>

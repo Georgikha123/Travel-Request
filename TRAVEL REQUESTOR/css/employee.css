@@ -1,0 +1,497 @@
+/* ============================================================================= */
+/* General Styles for the Website */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for content */
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 8px 8px 0 0;
+}
+
+h1 {
+    font-size: 26px;
+    font-weight: 600;
+    flex-grow: 1;  /* Makes the header title take available space */
+}
+
+#logoutButton {
+    padding: 10px 15px;
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-left: 15px;  /* Adds space between logout and profile */
+}
+
+#logoutButton:hover {
+    background-color: #e63946;
+}
+
+.profile-icon {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.profile-icon span {
+    font-size: 24px;
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #0056b3;
+    margin-left: 10px; /* Adds space between profile icon and the logout button */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.profile-icon span:hover {
+    background-color: #003366;
+}
+
+
+/* Tab Menu */
+.tab-menu {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #ddd;
+}
+
+.tab {
+    padding: 12px 20px;
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    color: #555;
+}
+
+.tab:hover {
+    background-color: #f0f0f0;
+}
+
+.tab.active {
+    border-bottom: 2px solid #007bff;
+    color: 555;
+}
+
+/* Heading for sections */
+h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Form styles
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    flex-basis: 25%;
+    text-align: right;
+    margin-right: 15px;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-group input {
+    flex-basis: 70%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #555;
+    transition: border-color 0.3s;
+}
+
+.form-group select {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    color: #555;
+    transition: border-color 0.3s;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.form-group select:focus {
+    border-color: #007bff;
+}
+
+
+.form-group input:focus {
+    border-color: #007bff;
+} */
+
+.form-group {
+    display: flex;
+    flex-wrap: wrap; /* Allow elements to wrap to the next line */
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    flex-basis: 25%;
+    text-align: right;
+    margin-right: 15px;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-group input {
+    flex-basis: 70%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #555;
+    transition: border-color 0.3s;
+}
+
+.form-group select {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    color: #555;
+    transition: border-color 0.3s;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* Center the submit button */
+#submitRequestButton {
+    margin: 0 auto; /* Center the button horizontally */
+    display: block; /* Make it a block element to take full width */
+}
+
+
+button {
+    padding: 12px 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+/* View Request Section (Employee) */
+#viewRequestSection {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#viewRequestSection h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.filter {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Adds space between label and dropdown */
+}
+
+.filter label {
+    font-size: 16px;
+    color: #555;
+    font-weight: 600;
+}
+
+.filter select {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    color: #555;
+    transition: border-color 0.3s;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.filter select:focus {
+    border-color: #007bff;
+}
+
+.filter select option {
+    padding: 8px 12px;
+    font-size: 16px;
+}
+
+/* Additional styling for when a specific priority filter is applied */
+.filter select option[value="critical"] {
+    color: #dc3545;
+}
+
+.filter select option[value="normal"] {
+    color: #28a745;
+}
+
+
+/* Request Table Styles */
+#requestTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#requestTable th, #requestTable td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+    color: #555;
+}
+
+#requestTable th {
+    background-color: #f7f7f7;
+}
+
+#requestTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#requestTable tr:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+/* Legend colors */
+.legend {
+    padding: 6px 12px;
+    color: white;
+    font-weight: 600;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.legend.pending{
+    background-color: yellow;
+    color: black;
+}
+
+.legend.approved {
+    background-color: #28a745;
+}
+
+.legend.on-hold {
+    background-color: #6c757d;
+}
+
+.legend.rejected {
+    background-color: #dc3545;
+}
+
+/* Modal Styling for View More Section */
+.request-details {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    max-width: 700px;
+    width: 90%;
+    display: none;
+}
+
+.request-details h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.request-details p {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.request-details strong {
+    color: #007bff;
+}
+
+.request-details .close-btn {
+    padding: 10px 20px;
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.request-details .close-btn:hover {
+    background-color: #e63946;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+body.modal-open::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+}
+
+/* Admin Section Styles */
+.request-management {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.request-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.request-entry:last-child {
+    border-bottom: none;
+}
+
+.request-entry button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.request-entry button:hover {
+    background-color: #0056b3;
+}
+
+.priority-critical {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Table Row Coloring for Requests */
+table tr.approved {
+    background-color: #28a745;
+    color: white;
+}
+
+table tr.on-hold {
+    background-color: #6c757d;
+    color: white;
+}
+
+table tr.rejected {
+    background-color: #dc3545;
+    color: white;
+}
+
+table tr {
+    transition: background-color 0.3s;
+}
+
+table tr:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+/* Admin Table Styles */
+#adminRequestTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+#adminRequestTable th, #adminRequestTable td {
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+    color: #555;
+    border: 1px solid #ddd;
+}
+
+#adminRequestTable th {
+    background-color: #f7f7f7;
+}
+
+#adminRequestTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#adminRequestTable tr:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.action-dropdown {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+
+/* Modal Styles */
+.request-details {
+    display: none;
+    /* other modal styling */
+}
+
+.modal-open .request-details {
+    display: block;
+}
+

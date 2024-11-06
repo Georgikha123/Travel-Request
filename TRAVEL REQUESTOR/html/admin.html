@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin</title>
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <header>
+        <h2>Admin View</h2>
+        <div class="logout-container">
+            <button class="logout-btn" onclick="logout()">Log out</button>
+            <span class="user-icon">👤</span>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="title">TRAVEL REQUESTOR</h1>
+
+        <div class="tabs">
+            <button class="tab active" id="pendingTab">Pending</button>
+            <button class="tab" id="allTab">All</button>
+            <button class="tab" id="approvedTab">Approved</button>
+            <button class="tab" id="rejectedTab">Rejected</button>
+            <button class="tab" id="onholdTab">On Hold</button>
+        </div>
+
+        <table class="request-table">
+            <thead>
+                <tr>
+                    <th>Employee Name</th>
+                    <th>Destination</th>
+                    <th>Priority</th>
+                    <th>View Details</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="requestsTableBody">
+                <!-- Requests will be dynamically added here -->
+            </tbody>
+        </table>
+    </main>
+    
+<!-- View More Modal -->
+<div id="viewMoreModal" class="modal">
+    <div class="modal-content">
+        <span id="closeModalBtn" class="close-btn">&times;</span>
+        <h3>Travel Request Details</h3>
+        <p><strong>Employee ID:</strong> <span id="modalEmpId"></span></p>
+        <p><strong>Employee Name:</strong> <span id="modalEmpName"></span></p>
+        <p><strong>Project:</strong> <span id="modalProject"></span></p>
+        <p><strong>Cause for Travel:</strong> <span id="modalCause"></span></p>
+        <p><strong>Source:</strong> <span id="modalSource"></span></p>
+        <p><strong>Destination:</strong> <span id="modalDestination"></span></p>
+        <p><strong>From Date:</strong> <span id="modalFromDate"></span></p>
+        <p><strong>No of Days:</strong> <span id="modalNoOfDays"></span></p>
+        <p><strong>Mode of Travel:</strong> <span id="modalModeOfTravel"></span></p>
+    </div>
+</div>
+
+    <script src="../js/admin.js"></script>
+</body>
+</html>
